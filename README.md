@@ -30,3 +30,16 @@ python project-test/main.py
 deactivate
 ```
 If you were able to run the main.py inside the project-test folder and you can see a screenshot then this should be enough to run the remaining other python files in this project.
+
+## Learning Notes
+
+Playright provides both sync and async (see sample-tests). 
+
+Sync tests use blocking based code and each line of code that run waits for the previous line to finish before it run. 
+
+Async lines of code do not wait and need to have await's on them to achieve the same behaviour.
+
+Sync based tests are good for sequential based tests i.e. one user going through a web session (user log in).
+
+Async based tests are good for tests where you need multiple actions happening.
+
