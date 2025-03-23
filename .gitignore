@@ -1,3 +1,5 @@
 venv/
 screenshots/
 .idea/
+test-results/
+*/__pycache__/

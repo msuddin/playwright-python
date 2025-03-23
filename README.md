@@ -29,11 +29,24 @@ python project-test/main.py
 ```
 deactivate
 ```
-If you were able to run the main.py inside the project-test folder and you can see a screenshot then this should be enough to run the remaining other python files in this project.
+If you were able to run the `main.py` inside the `project-test` folder and you can see a screenshot then this should be enough to run the remaining other python files in this project.
+
+### Running Tests
+
+To run tests, from the root directory, type the following:
+```
+pytest
+```
+This will run all the tests inside the `tests` folder. 
+
+When running pytest, this looks at the `pytest.ini` file for further configurations. 
+
+See `pytest.ini` file for further details.
 
 ## Learning Notes
 
-Playright provides both sync and async (see sample-tests). 
+### Async vs Sync
+Playwright provides both sync and async (samples). 
 
 Sync tests use blocking based code and each line of code that run waits for the previous line to finish before it run. 
 
@@ -43,3 +56,10 @@ Sync based tests are good for sequential based tests i.e. one user going through
 
 Async based tests are good for tests where you need multiple actions happening.
 
+### Pytest
+
+Pytest is a testing framework (similar to JUnit for Java).
+
+Also added `pytest.ini` that provides configuration options when running pytest on the command line.
+
+See `pytest.ini` for further configuration details.
