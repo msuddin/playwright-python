@@ -63,3 +63,36 @@ Pytest is a testing framework (similar to JUnit for Java).
 Also added `pytest.ini` that provides configuration options when running pytest on the command line.
 
 See `pytest.ini` for further configuration details.
+
+### Codegen
+
+You can use `playwright codegen` on the command line to help write tests.
+
+Command line examples:
+```
+playwright codegen 
+```
+or with a url
+```
+playwright codegen saucedemo.com
+```
+
+It's a web page recorder that you can use to record actions. 
+
+Once done you can then convert the test into any testing framework and tool.
+
+For example, you can convert to `Python with Pytest`, or `Java with Junit`.
+
+### page.pause()
+
+When using `page.pause()` inside a test and then running pytest, this acts as a test debugger.
+
+This will stop the test from running and allows you to step through each test line by line.
+
+Using `page.pause()` inside a test:
+
+```
+# Given
+page.goto("https://www.saucedemo.com/")
+page.pause()
+```
