@@ -83,7 +83,7 @@ Once done you can then convert the test into any testing framework and tool.
 
 For example, you can convert to `Python with Pytest`, or `Java with Junit`.
 
-### page.pause()
+### Use page.pause() for debugging
 
 When using `page.pause()` inside a test and then running pytest, this acts as a test debugger.
 
@@ -96,3 +96,11 @@ Using `page.pause()` inside a test:
 page.goto("https://www.saucedemo.com/")
 page.pause()
 ```
+
+### Imports for Page Objects
+
+When creating the `page_object` directory, I had to also create a blank `__init__.py` file inside it.
+
+This blank file marks the `page_object` directory as a package.
+
+We can then import any of the page objects as pages inside tests.
